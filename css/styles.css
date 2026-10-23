@@ -1,80 +1,144 @@
 :root{
-    color-scheme:dark;
-
+    color-scheme:Dark;
     --verde1: #738d64;
     --verde2: #0f231a;
     --blanco: #f4f1e6;
+    
 
     --font-header: 'Adelle-Sans';
     --font-txt: 'Helvetica';
+
+    --font-size-h1: 40px;
+    --font-size-h2: 50px;
+    --font-size-h3: 15px;
+    --font-size-p: 17px;
+}
+
+.Light-theme{
+    --verde1: #f4f1e6;
+    --verde2: #738d64;
+    --blanco: #0f231a; 
 }
 
 h1{
     font-family: var(--font-header);
-    font-size: 40pts;
+    font-size: var(--font-size-h1);
     text-align: center;
     color: var(--verde1);
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 h2{
     font-family: var(--font-header);
-    font-size: 20pts;
+    font-size: var(--font-size-h2);
     text-align: center;
     color: var(--blanco);
     font-style:oblique;
+
 }
 
 h3{
     font-family: var(--font-txt);
-    font-size: 8pts;
+    font-size: var(--font-size-h3);
     text-align: center;
     color: var(--verde1);
-     font-style: italic;
+    font-style: italic;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 p{
     font-family: var(--font-txt);
-    font-size: 6pts;
+    font-size: var(--font-size-p);
     text-align: center;
     color: var(--blanco);
-    f
 }
 
 header{
     height: 100px;
     width: auto;
-    
-    
-
     background-color: var(--verde1);
-
-    img{
-        height: 100%;
-        width: auto;
-        margin: 0 auto;
-        display: block;
-    }
-    
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   
+        
 }
 
 body{
+    transition: all 0.5s ease, color 0.25s ease;
     background: var(--verde2);
-
-    margin-left: 50px;
-    margin-right: 50px;;
+    margin: 0;
 
     .hero{
         background: var(--verde2);
-
     }
 
     .info{
         align-items: center;
     }
 
+    main{
+        padding-right: 70px;
+        padding-left: 70px;
+    }
+
+}
+
+#home-link {
+    fill: var(--blanco);
+    display: inline-flex;
+    width: 200px !important;  /* Cambia 150px por el tamaño que quieras */
+    height: auto !important;;
+}   
+
+@media (min-witdth: 768px){
+    :root{
+        --font-size-h1: 40px;
+        --font-size-h2: 50px;
+        --font-size-h3: 15px;
+        --font-size-p: 17px;
+    }
+}
+
+@media (min-witdth: 1024px){
+    :root{
+       --font-size-h1: 46px;
+        --font-size-h2: 58px;
+        --font-size-h3: 16px;
+        --font-size-p: 18px;
+    }
+}
+
+@media (min-witdth: 1280px){
+    :root{
+        --font-size-h1: 52px;
+        --font-size-h2: 66px;
+        --font-size-h3: 18px;
+        --font-size-p: 19px;
+    }
 }
 
 
+@media (min-witdth: 1440px){
+    :root{
+        --font-size-h1: 58px;
+        --font-size-h2: 74px;
+        --font-size-h3: 19px;
+        --font-size-p: 20px;
+    }
+}
+
+@media (min-witdth: 1920px){
+    :root{
+        --font-size-h1: 64px;
+        --font-size-h2: 82px;
+        --font-size-h3: 20px;
+        --font-size-p: 22px;
+    }
+}    
 
 
 button{
@@ -82,11 +146,13 @@ button{
     right: 1em;
     bottom: 1em;
     background: var(--blanco);
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
     border-radius: 100%;
 
     color: var(--verde2);
 
 }
+
+
  
